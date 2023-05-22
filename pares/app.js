@@ -13,7 +13,9 @@ function contaPares(){
     }
     if(cont == 0){
         divResultado.innerHTML = "não há números pares";
-    }
+    }else{
+        divResultado.innerHTML += `<p> Ao todo são ${cont} números pares `
+}
     cont = 0;
 
 }
