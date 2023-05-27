@@ -38,7 +38,7 @@ for(var c = 0; c < numeroColunasBlocos; c++) {
 }
 
 var pontuacao = 0;
-var numeroBolas = 1; 
+var numeroBolas = 3; 
 
 var teclaDireitaPressionada = false;
 var teclaEsquerdaPressionada = false;
