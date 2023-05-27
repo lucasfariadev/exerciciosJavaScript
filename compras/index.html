@@ -23,9 +23,9 @@
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-nav-item"><a href="../index.html">Início</a></li>
-                <li class="sidebar-nav-item"><a href="index.html">Pares</a></li>
+                <li class="sidebar-nav-item"><a href="../pares/index.html">Pares</a></li>
                 <li class="sidebar-nav-item"><a href="../graus/index.html">Graus</a></li>
-                <li class="sidebar-nav-item"><a href="../compras/index.html">Compras</a></li>
+                <li class="sidebar-nav-item"><a href="index.html">Compras</a></li>
                 <li class="sidebar-nav-item"><a href="../quilometros/index.html">quilometros</a></li>
                 <li class="sidebar-nav-item"><a href="../custoPìsos/index.html">Custo Pisos</a></li>
                 <li class="sidebar-nav-item"><a href="../imc/index.html">Imc</a></li>
@@ -36,13 +36,44 @@
         <!-- Header-->
         <header class="masthead d-flex align-items-center">
             <div class="container px-4 px-lg-5 text-center">
-              <h1>Mostra Pares</h1>
-              <h4>Digite um valor abaixo e veja todos os pares até chegar nele</h4>
-              <input type="number" id="valor" />
-              <button onclick="contaPares()">Pares</button>
-              <div id="resultado" class="align-items-center"></div>
-              </div>
-            
+                <div>
+
+
+                    <h1>Calculadora de Vendas</h1>
+        
+                    <h2>Produto 1</h2>
+                    <label for="nome1">Nome:</label>
+                    <input type="text" id="nome1"><br>
+                    <label for="valor1">Valor:</label>
+                    <input type="number" id="valor1"><br>
+                    <label for="quantidade1">Quantidade:</label>
+                    <input type="number" id="quantidade1"><br>
+                    <p>Subtotal: R$<span id="subtotal1">0.00</span></p>
+                    
+                    <h2>Produto 2</h2>
+                    <label for="nome2">Nome:</label>
+                    <input type="text" id="nome2"><br>
+                    <label for="valor2">Valor:</label>
+                    <input type="number" id="valor2"><br>
+                    <label for="quantidade2">Quantidade:</label>
+                    <input type="number" id="quantidade2"><br>
+                    <p>Subtotal: R$<span id="subtotal2">0.00</span></p>
+                    
+                    <h2>Produto 3</h2>
+                    <label for="nome3">Nome:</label>
+                    <input type="text" id="nome3"><br>
+                    <label for="valor3">Valor:</label>
+                    <input type="number" id="valor3"><br>
+                    <label for="quantidade3">Quantidade:</label>
+                    <input type="number" id="quantidade3"><br>
+                    <p>Subtotal: R$<span id="subtotal3">0.00</span></p>
+                    
+                    <button onclick="calcularTotal()">Calcular Total</button>
+                    
+                    <h2>Total da Venda: R$<span id="valorTotal">0.00</span></h2>
+                </div>
+
+            </div>
         </header>
               <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>

@@ -23,11 +23,11 @@
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-nav-item"><a href="../index.html">Início</a></li>
-                <li class="sidebar-nav-item"><a href="index.html">Pares</a></li>
+                <li class="sidebar-nav-item"><a href="../pares/index.html">Pares</a></li>
                 <li class="sidebar-nav-item"><a href="../graus/index.html">Graus</a></li>
                 <li class="sidebar-nav-item"><a href="../compras/index.html">Compras</a></li>
                 <li class="sidebar-nav-item"><a href="../quilometros/index.html">quilometros</a></li>
-                <li class="sidebar-nav-item"><a href="../custoPìsos/index.html">Custo Pisos</a></li>
+                <li class="sidebar-nav-item"><a href="index.html">Custo Pisos</a></li>
                 <li class="sidebar-nav-item"><a href="../imc/index.html">Imc</a></li>
                 <li class="sidebar-nav-item"><a href="../valores/index.html">Valores</a></li>
                 <li class="sidebar-nav-item"><a href="../jogo/index.html">Jogo</a></li>
@@ -36,11 +36,22 @@
         <!-- Header-->
         <header class="masthead d-flex align-items-center">
             <div class="container px-4 px-lg-5 text-center">
-              <h1>Mostra Pares</h1>
-              <h4>Digite um valor abaixo e veja todos os pares até chegar nele</h4>
-              <input type="number" id="valor" />
-              <button onclick="contaPares()">Pares</button>
-              <div id="resultado" class="align-items-center"></div>
+                <h1>Calculadora de Custo de Assentamento de Piso</h1>
+    
+                <label for="comprimento">Comprimento do cômodo (em metros):</label><br>
+                
+                <input type="number" id="comprimento"><br>
+                
+                <label for="largura">Largura do cômodo (em metros):</label><br>
+                
+                <input type="number" id="largura"><br>
+                
+                <button onclick="calcularCusto()">Calcular Custo</button>
+                
+                <h2>Resultados</h2>
+                <h3>Área do cômodo: <span id="area">0.00</span> m²</h3>
+                <h3>Custo total de assentamento de piso: R$<span id="custoTotal">0.00</span></h3>
+            </div>
               </div>
             
         </header>
