@@ -17,8 +17,8 @@ var posicaoBarraX = (canvas.width - larguraBarra) / 2;
 var raioBola = 10;
 var posicaoBolaX = canvas.width / 2;
 var posicaoBolaY = canvas.height - 30;
-var velocidadeBolaX = 1;
-var velocidadeBolaY = -1;
+var velocidadeBolaX = 1.5;
+var velocidadeBolaY = -1.5;
 
 var numeroLinhasBlocos = 3;
 var numeroColunasBlocos = 5;
