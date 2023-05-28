@@ -38,7 +38,7 @@ for(var c = 0; c < numeroColunasBlocos; c++) {
 }
 
 var pontuacao = 0;
-var numeroBolas = 3; 
+var numeroVidas = 1; 
 
 var teclaDireitaPressionada = false;
 var teclaEsquerdaPressionada = false;
@@ -91,11 +91,7 @@ function desenharPontuacao() {
     ctx.fillText("Pontuação: " + pontuacao, 8, 20);
 }
 
-function desenharNumeroBolas() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Bolas: " + numeroBolas, canvas.width - 80, 20);
-}
+
 
 function desenharPowerAtivo() {
     if (powerAtivo.ativo) {
@@ -115,6 +111,8 @@ function colisaoBarraPowerAtivo() {
         powerAtivo.y = 0;
         powerAtivo.x = 0;
         larguraBarra += 20;
+        var numeroAleatorio = Math.random() * (2 - 1) + 1;
+
 
         setTimeout(function() {
             larguraBarra -= 20;
@@ -138,8 +136,10 @@ function deteccaoColisao() {
                         powerAtivo.y = bloco.y + alturaBloco / 2;
                     }
                     if (pontuacao % (numeroColunasBlocos * numeroLinhasBlocos) == 0) {
+                        velocidadeBolaX ++ ;
+                        velocidadeBolaY ++;
                         reiniciarBlocos();
-                        numeroBolas++;
+                        
                     }
                 }
             }
@@ -179,8 +179,8 @@ function moverBola() {
         if(posicaoBolaX > posicaoBarraX && posicaoBolaX < posicaoBarraX + larguraBarra) {
             velocidadeBolaY = -velocidadeBolaY;
         } else {
-            numeroBolas--;
-            if (numeroBolas === 0) {
+            numeroVidas--;
+            if (numeroVidas === 0) {
                 alert("Fim de jogo!");
                 document.location.reload();
             } else {
@@ -211,7 +211,7 @@ function desenhar() {
     desenharBola();
     desenharBlocos();
     desenharPontuacao();
-    desenharNumeroBolas();
+
     desenharPowerAtivo();
     colisaoBarraPowerAtivo();
     deteccaoColisao();
